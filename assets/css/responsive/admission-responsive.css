@@ -1,0 +1,21 @@
+/* Tablet */
+@media (min-width: 46.25rem) and (max-width: 64rem) {
+    .container-content{
+        padding: 150px 50px 50px 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.188rem) {
+    .container-content{
+        padding: 150px 20px 50px 20px;
+    }
+
+    .section-notification{
+        width: 380px;
+    }
+
+    .section-mobile{
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,73 @@
+/* Tablet */
+@media (min-width: 46.25rem) and (max-width: 64rem) {
+    .main-body .row-intro {
+        flex-wrap: wrap;
+    }
+
+    .row-intro .intro-col5{
+        width: 100%;
+    }
+
+    .location-cards{
+        margin: 0 26px;
+    }
+
+    .club-cards{
+       margin: 100px 20px 120px 35px;
+    }
+
+    .card{
+        width: 280px;
+    }
+
+    .card:hover{
+        height: 350px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.188rem) {
+    .des-v1{
+        display: none;
+    }
+
+    .main-body .row-intro{
+        flex-wrap: wrap;
+    }
+
+    .intro-col5{
+        width: 100% !important;
+    }
+
+    .intro-box-5 h2{
+        font-size: 2rem;
+    }
+
+    .intro-box-5 .text-custom{
+        font-size: 1.5rem;
+    }
+
+    .content__title{
+        margin: 0 20px;
+    }
+
+    .card__article{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .club-cards{
+        margin-top: 40px;
+    }
+
+    .card{
+        margin: 50px 0;
+    }
+
+   .col-res-12{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   }
+}

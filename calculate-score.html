@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/images/logo/logo_ou.png"
+            type="image/png">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <title>Tính điểm xét tuyển Đại học Mở TP.HCM</title>
+        <link rel="stylesheet" href="./assets/css/default.css">
+        <link rel="stylesheet" href="./assets/css/home.css">
+        <link rel="stylesheet"
+            href="./assets/css/responsive/default-responsive.css">
+        <link rel="stylesheet" href="./assets/css/calculate-score.css">
+        <link rel="stylesheet"
+            href="./assets/css/responsive/calculate-score-responsive.css">
+
+        <style>
+        
+    </style>
+    </head>
+    <body>
+        <!-- Loading -->
+        <div class="loader">
+            <dotlottie-player
+                src="https://lottie.host/4847d9c4-1e33-45d3-8924-fb0c84491160/qZKISvQ0JF.json"
+                background="transparent" speed="1"
+                style="width: 300px; height: 300px" direction="1"
+                playMode="normal" loop
+                autoplay></dotlottie-player>
+        </div>
+
+        <!-- ProgressBar -->
+        <div id="cursorMeter">
+            <div id="progressBar"></div>
+        </div>
+
+        <!-- Back top top -->
+        <button id="back-to-top"><i
+                class='bx bxs-left-top-arrow-circle'></i></button>
+        
+        <!-- Navbar -->
+        <nav>
+            <a class="nav__logo" href="./index.html">
+                <div class="nav__logo__image">
+                    <img src="./assets/images/logo/logo_ou.png" alt="Logo OU">
+                </div>
+
+                <h3 class="nav__logo__title">Tuyển sinh OU</h3>
+            </a>
+
+            <ul class="nav__menu">
+                <li>
+                    <div class="btn-mobile close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </li>
+
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="introduce.html">Giới thiệu</a></li>
+                <li><a href>Chương trình đào tạo</a></li>
+                <li><a href>Tuyển sinh đại học</a></li>
+                <li><a href="./calculate-score.html" class="choose">Tính điểm xét tuyển</a></li>
+            </ul>
+            <div class="btn-mobile open">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+
+        <div class="caculator-container">
+            <div class="hero-banner">
+                <div class="container">
+                    <div class="hero-before">
+                        <div class="loops-container">
+                            <img class="hero-loops"
+                                src="assets/images/calculate-score/blue_package.svg"
+                                alt="blue loops">
+                        </div>
+                        <img class="hero-package"
+                            src="assets/images/calculate-score/orange_package.svg"
+                            alt="orange package">
+                    </div>
+                    <div class="hero-container">
+                        <img alt="Sổ tay tuyển sinh OU" class="hero-banner-logo"
+                            src="assets/images/calculate-score/banner_logo.png"
+                            width="250" height="250">
+                        <h1 class="hero-title">Tính điểm xét tuyển học bạ</h1>
+                        <p class="hero-subtitle">Công cụ tính điểm xét tuyển học bạ
+                            tất cả các ngành đào tạo trong Trường Đại học Mở
+                            Tp.HCM</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="toast-container" id="toastContainer"></div>
+            <div class="container">
+                <div class="section-title" id="hocba-step1">
+                    <div class="line"></div>
+                    <h1 class="title">Tính điểm xét tuyển học bạ THPT<span> - Đại học Mở Tp.HCM</span></h1>
+                </div>
+                <form id="scoreForm">
+                    <div class="grade-column">
+                        <h3>Lớp 10 (Cột điểm cả năm)</h3>
+                        <div class="input-group">
+                            <label>Toán học (Cả năm)</label>
+                            <input type="text" id="math10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Vật lý (Cả năm)</label>
+                            <input type="text" id="phy10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Hoá học (Cả năm)</label>
+                            <input type="text" id="chem10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Sinh học (Cả năm)</label>
+                            <input type="text" id="bio10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngữ văn (Cả năm)</label>
+                            <input type="text" id="lit10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Lịch sử (Cả năm)</label>
+                            <input type="text" id="hist10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Địa lý (Cả năm)</label>
+                            <input type="text" id="geo10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngoại ngữ (Cả năm)</label>
+                            <input type="text" id="lang10" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>GDCD (Cả năm)</label>
+                            <input type="text" id="gdcd10" placeholder="0.00 điểm">
+                        </div>
+                    </div>
+    
+                    <div class="grade-column">
+                        <h3>Lớp 11 (Cột điểm cả năm)</h3>
+                        <div class="input-group">
+                            <label>Toán học (Cả năm)</label>
+                            <input type="text" id="math11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Vật lý (Cả năm)</label>
+                            <input type="text" id="phy11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Hoá học (Cả năm)</label>
+                            <input type="text" id="chem11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Sinh học (Cả năm)</label>
+                            <input type="text" id="bio11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngữ văn (Cả năm)</label>
+                            <input type="text" id="lit11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Lịch sử (Cả năm)</label>
+                            <input type="text" id="hist11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Địa lý (Cả năm)</label>
+                            <input type="text" id="geo11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngoại ngữ (Cả năm)</label>
+                            <input type="text" id="lang11" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>GDCD (Cả năm)</label>
+                            <input type="text" id="gdcd11" placeholder="0.00 điểm">
+                        </div>
+                    </div>
+    
+                    <div class="grade-column">
+                        <h3>Lớp 12 (Điểm học kỳ 1)</h3>
+                        <div class="input-group">
+                            <label>Toán học (Học kỳ 1)</label>
+                            <input type="text" id="math12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Vật lý (Học kỳ 1)</label>
+                            <input type="text" id="phy12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Hoá học (Học kỳ 1)</label>
+                            <input type="text" id="chem12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Sinh học (Học kỳ 1)</label>
+                            <input type="text" id="bio12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngữ văn (Học kỳ 1)</label>
+                            <input type="text" id="lit12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Lịch sử (Học kỳ 1)</label>
+                            <input type="text" id="hist12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Địa lý (Học kỳ 1)</label>
+                            <input type="text" id="geo12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>Ngoại ngữ (Học kỳ 1)</label>
+                            <input type="text" id="lang12" placeholder="0.00 điểm">
+                        </div>
+                        <div class="input-group">
+                            <label>GDCD (Học kỳ 1)</label>
+                            <input type="text" id="gdcd12" placeholder="0.00 điểm">
+                        </div>
+                    </div>
+    
+                    <div class="preferences">
+                        <h3>Điểm khu vực ưu tiên</h3>
+                        <select
+                            class="select-dropdown MuiNativeSelect-select MuiNativeSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-eyh595"
+                            aria-invalid="false" id="optionsKVUT">
+                            <option value="0" data-score="0">Không có</option>
+                            <option value="1" data-score="0.75" selected>Khu vực
+                                1</option>
+                            <option value="2" data-score="0.25">Khu vực 2</option>
+                            <option value="2nt" data-score="0.5">Khu vực 2 - Nông
+                                thôn</option>
+                            <option value="3" data-score="0">Khu vực 3</option>
+                        </select>
+    
+                        <h3>Điểm đối tượng ưu tiên</h3>
+                        <select id="optionsDTUT" class="select-dropdown">
+                            <option value="0" data-score="0">Không có</option>
+                            <option value="1" data-score="2">Đối tượng 1</option>
+                            <option value="2" data-score="2">Đối tượng 2</option>
+                            <option value="3" data-score="2">Đối tượng 3</option>
+                            <option value="4" data-score="2">Đối tượng 4</option>
+                            <option value="5" data-score="1">Đối tượng 5</option>
+                            <option value="6" data-score="1">Đối tượng 6</option>
+                            <option value="7" data-score="1">Đối tượng 7</option>
+                        </select>
+    
+                        <h3>Điểm chứng chỉ ngoại ngữ</h3>
+                        <select id="optionsICS" class="select-dropdown">
+                            <optgroup label="Không có chứng chỉ">
+                                <option value="none" data-score="0">Không
+                                    có</option>
+                            </optgroup>
+                            <optgroup label="Tiếng anh (IELTS)">
+                                <option value="ielts4" data-score="0.5">IELTS
+                                    4.0</option>
+                                <option value="ielts5" data-score="1">IELTS
+                                    5.0</option>
+                                <option value="ielts6" data-score="2">IELTS
+                                    6.0</option>
+                                <option value="ielts7" data-score="3">IELTS
+                                    7.0</option>
+                            </optgroup>
+                            <optgroup label="Tiếng anh (TOEFL)">
+                                <option value="toefl80" data-score="1">TOEFL
+                                    80</option>
+                                <option value="toefl100" data-score="2">TOEFL
+                                    100</option>
+                                <option value="toefl120" data-score="3">TOEFL
+                                    120</option>
+                            </optgroup>
+                        </select>
+                    </div>
+    
+                    <button id="calculateButton" class="buttons" type="submit">Tính
+                        điểm</button>
+                </form>
+    
+                <div id="results" class="results-row" style="display: none;">
+                    <h3>Kết quả điểm trung bình môn học</h3>
+                    <p>❗ Lưu ý: Điểm ở dưới đây là điểm trung bình của 3 năm (năm
+                        10, năm 11 & học kỳ 1 năm 12) mà bạn đã nhập ở bên trên</p>
+                    <div id="resultsTable">
+                    </div>
+                </div>
+                <div id="blockResults" style="display: none;">
+                    <h3>Kết quả điểm khối thi</h3>
+                    <p>❗ Quy định cộng điểm ưu tiên:</p>
+                    <ul><li>Nếu tổng điểm đạt được theo tổ hợp môn nhỏ hơn 22,5 (khi
+                            quy đổi về điểm theo thang 10 và tổng điểm 3 môn tối đa
+                            là 30) thì cộng điểm ưu tiên theo khu vực, đối tượng
+                            chính sách theo mức thông thường.</li><li>Nếu tổng điểm
+                            từ 22.5 điểm trở lên (khi quy đổi về điểm theo thang 10
+                            và tổng điểm 3 môn tối đa là 30) thì cộng điểm ưu tiên
+                            theo công thức sau:</li><li><b>Điểm ưu tiên = [(30 –
+                                tổng điểm tổ hợp mà bạn xét)/7,5] × (điểm khu vực ưu
+                                tiên + điểm đối tượng ưu tiên)</b></li></ul>
+                    <div id="blockResultsTable" class="results-row3"></div>
+                </div>
+                <div class="couserResults" id="couserResults"
+                    style="display: none;">
+                    <h3>Kết quả (Điểm xét tuyển học bạ)</h3>
+                    <p>❗ Lưu ý: Điểm ở dưới đây không phải là điểm chuẩn, đây là
+                        điểm của bạn đã nhập ở trên, hệ thống sẽ tính điểm của bạn ở
+                        từng ngành và tổ hợp mà ngành đó xét tuyển. Muốn tìm nhanh
+                        ngành của bạn, vui lòng nhập vào ô tìm kiếm 🔍</p>
+                    <p>❓ Nếu bạn muốn xem review (giới thiệu) thông tin về ngành
+                        mình học như học ở đâu, học phí như thế nào, chương trình
+                        đào tạo, cơ hội việc làm... thì bạn lướt sang cột Giới thiệu
+                        ngành học (cột cuối cùng ở bên phải - sau khi đã ấn nút tính
+                        điểm) và nhấp vào link để đọc.</p>
+                    <p>🔖 Xem điểm chuẩn các năm trước <a href="#" style="margin-top: 20px;">tại đây !</a></p>
+    
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                    <div id="resultsContainer"></div>
+                    <div class="pagination">
+                        <button id="prevPage" class="disabled"><i
+                                class='bx bx-chevron-left'></i> Trước</button>
+                        <button id="nextPage">Sau <i
+                                class='bx bx-chevron-right'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Thông tin khác</h4>
+                        <ul>
+                            <li>
+                                <a href="https://tuyensinh.ou.edu.vn/"
+                                    target="_blank">Website tuyển sinh</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/groups/ou.community"
+                                    target="_blank">Cộng đồng sinh viên
+                                    OU</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/groups/oumembers"
+                                    target="_blank">Sinh viên đại học Mở</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.messenger.com/t/301101586751149/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+                                    target="_blank">Message tuyển sinh</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Liên hệ</h4>
+                        <ul>
+                            <li>
+                                <a href="mailto:tuyensinh@ou.edu.vn">Email tuyển
+                                    sinh</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/tuyensinh.ou.edu.vn"
+                                    target="_blank">Fanpage tuyển
+                                    sinh</a>
+                            </li>
+                            <li>
+                                <a href="tel:1800585884">Hotline</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+2/@10.7611471,106.6923099,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f114014707f:0x3f198b980ca59fdf!8m2!3d10.7611471!4d106.6923099!16s%2Fg%2F1td8wm26?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">Cơ sở hành chính</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Cơ sở học tập</h4>
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+1/@10.7763177,106.6902948,18z/data=!4m6!3m5!1s0x31752f3ae35e3725:0x20c5174a47f97be3!8m2!3d10.7763284!4d106.6902291!16s%2Fm%2F02qqlv4?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">97 Võ Văn Tần, P.6 Q.3</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/Khu+d%C3%A2n+c%C6%B0+Nh%C6%A1n+%C4%90%E1%BB%A9c/@10.6785135,106.6893797,17z/data=!3m1!4b1!4m6!3m5!1s0x317530465869b203:0x5b9acb79810d30ee!8m2!3d10.6785135!4d106.6893797!16s%2Fg%2F11gdzrvh8y?entry=tts&shorturl=1"
+                                    target="_blank">Nhơn Đức, Huyện Nhà Bè</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.+H%E1%BB%93+Ch%C3%AD+Minh+-+C%C6%A1+s%E1%BB%9F+4/@10.7903108,106.6999974,18z/data=!4m6!3m5!1s0x3175298fbe8d0ad9:0x752364c60b6da2c3!8m2!3d10.7903963!4d106.7005621!16s%2Fg%2F11ghn4263m?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">02 Mai Thị Lựu, P.Đa Kao,
+                                    Q.1</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+B%C3%ACnh+D%C6%B0%C6%A1ng/@10.9862616,106.6715896,17z/data=!4m5!3m4!1s0x0000000000000000:0x319be7faa14dc1ed!8m2!3d10.9878148!4d106.6735119?shorturl=1"
+                                    target="_blank">68 Lê Thị Trung, Tp.Thủ Dầu
+                                    Một</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+H%E1%BB%8Dc+M%E1%BB%9F+Tp.+H%E1%BB%93+Ch%C3%AD+Minh,+c%C6%A1+s%E1%BB%9F+2./@10.9024207,106.8551803,18z/data=!4m6!3m5!1s0x3174df0599397ef3:0x45051888e4f64907!8m2!3d10.9018677!4d106.856602!16s%2Fg%2F11c567_nsd?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">P.Long Bình Tân, Tp. Biên
+                                    Hòa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <p>Copyright &copy 2024 - Bản quyền thuộc Lưu Văn Phúc</p>
+        </div>
+        <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+        <script src="./assets/js/default.js"></script>
+        <script src="assets/js/calculate-score.js"></script>
+    </body>
+</html>

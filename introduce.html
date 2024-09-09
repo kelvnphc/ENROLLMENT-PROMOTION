@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logo/logo_ou.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tuyển sinh Đại học Mở TP.HCM</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="./assets/css/introduce.css">
+    <link rel="stylesheet" href="./assets/css/responsive/default-responsive.css">
+    <link rel="stylesheet" href="./assets/css/responsive/introduce-responsive.css">
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="loader">
+        <dotlottie-player src="https://lottie.host/4847d9c4-1e33-45d3-8924-fb0c84491160/qZKISvQ0JF.json"
+            background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" loop
+            autoplay></dotlottie-player>
+    </div>
+
+    <!-- ProgressBar -->
+    <div id="cursorMeter">
+        <div id="progressBar"></div>
+    </div>
+
+    <!-- Back top top -->
+    <button id="back-to-top"><i class='bx bxs-left-top-arrow-circle'></i></button>
+    <!-- Navbar -->
+    <nav>
+        <a class="nav__logo" href="./index.html">
+            <div class="nav__logo__image">
+                <img src="./assets/images/logo/logo_ou.png" alt="Logo OU">
+            </div>
+
+            <h3 class="nav__logo__title">Tuyển sinh OU</h3>
+        </a>
+
+        <ul class="nav__menu">
+            <li>
+                <div class="btn-mobile close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </li>
+
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./introduce.html" class="choose">Giới thiệu</a></li>
+            <li><a href="./admission.html">Tuyển sinh đại học</a></li>
+            <li><a href="./calculate-score.html">Tính điểm xét tuyển</a></li>
+        </ul>
+        <div class="btn-mobile open">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="container-v1">
+            <div class="slide-v1">
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_1.jpg');">
+                    <div class="content-v1">
+                        <div class="des-v1">
+                            Trường Đại học Mở thành phố
+                            Hồ Chí Minh là một cơ sở đào tạo đại học
+                            hàng đầu tại Việt Nam, nổi bật với chất
+                            lượng giáo dục và nghiên cứu.
+                        </div>
+                    </div>
+                </div>
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_2.jpg');">
+                    <div class="content-v1">
+                        <div class="des-v1">Cung cấp các chương trình
+                            đào tạo đa dạng và chuyên sâu, phục vụ nhu
+                            cầu học tập và nghiên cứu của sinh viên và
+                            giảng viên.
+                        </div>
+                    </div>
+                </div>
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_3.webp');">
+                    <div class="content-v1">
+                        <div class="des-v1">Hỗ trợ sinh viên với cơ sở
+                            vật chất hiện đại và đội ngũ giảng viên uy
+                            tín, cam kết mang đến trải nghiệm học tập
+                            chất lượng cao.
+                        </div>
+                    </div>
+                </div>
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_4.jpg');">
+                    <div class="content-v1">
+                        <div class="des-v1">Khuyến khích nghiên cứu và
+                            phát triển, tạo điều kiện cho sinh viên tham
+                            gia các dự án và hoạt động ngoại khóa.
+                        </div>
+                    </div>
+                </div>
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_5.jpg');">
+                    <div class="content-v1">
+                        <div class="des-v1">Tạo ra môi trường học tập
+                            tích cực và thân thiện, đồng hành cùng sinh
+                            viên trên con đường phát triển bản thân và
+                            nghề nghiệp.
+                        </div>
+                    </div>
+                </div>
+                <div class="item-v1" style="background-image: url('assets/images/introduce/carousel/carousel_6.webp');">
+                    <div class="content-v1">
+                        <div class="des-v1">Cam kết mang đến nền giáo
+                            dục chất lượng, đáp ứng nhu cầu và kỳ vọng
+                            của sinh viên trong kỷ nguyên số.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-v1">
+                <button class="prev-v1"><i class='bx bx-left-arrow-alt'></i></button>
+                <button class="next-v1"><i class='bx bx-right-arrow-alt'></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achivement -->
+    <section class="main-body">
+        <div class="intro-container">
+            <div class="crossbar">
+                <h1>Thành tựu</h1>
+            </div>
+
+            <div class="row-intro reveal">
+                <div class="intro-col5">
+                    <div class="intro-box-full">
+                        <img src="./assets/images/introduce/achivement/achivement_1.jpg">
+                    </div>
+                </div>
+                <div class="intro-col5">
+                    <div class="intro-box-5">
+                        <h2>Xếp hạng hàng đầu</h2>
+                        <p>
+                            Trường Đại học Mở Thành phố Hồ Chí Minh đã được
+                            xếp hạng 1 trong các trường đại học hàng đầu tại
+                            Việt Nam năm 2023. Với hệ thống cơ sở vật chất
+                            hiện đại và đội ngũ giảng viên chất lượng,
+                            trường liên tục đứng đầu về chất lượng đào tạo
+                            và nghiên cứu. Trường Đại học Mở Thành phố Hồ Chí Minh đã vinh
+                            dự nhận giải thưởng
+                            "Trường Đại học xuất sắc nhất" từ Bộ Giáo dục và
+                            Đào tạo năm 2022. Giải thưởng này là sự công
+                            nhận cho những nỗ lực không ngừng trong việc
+                            nâng cao chất lượng giảng dạy và nghiên cứu khoa
+                            học.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-intro reversed reveal">
+                <div class="intro-col5">
+                    <div class="intro-box-full">
+                        <img src="./assets/images/introduce/achivement/achivement_2.jpg">
+                    </div>
+                </div>
+                <div class="intro-col5">
+                    <div class="intro-box-5">
+                        <h2>Giải thưởng xuất sắc</h2>
+                        <p>
+                            Trường Đại học Mở Thành phố Hồ Chí Minh đã luôn nổ lực
+                            không ngừng trong việc tham gia các cuộc thi các cuộc thi
+                            về nghiên cứu khoa học và đem lại nhiều giải thưởng cao, giá trị.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-intro reveal">
+                <div class="intro-col5">
+                    <div class="intro-box-full">
+                        <img src="./assets/images/introduce/achivement/achivement_3.jpg">
+                    </div>
+                </div>
+                <div class="intro-col5">
+                    <div class="intro-box-5">
+                        <h2 class="text-custom">Tỉ lệ sinh viên tốt nghiệp cao</h2>
+                        <p>
+                            Trường Đại học Mở Thành phố Hồ Chí Minh dẫn đầu
+                            trong danh sách các trường có tỷ lệ sinh viên
+                            tốt nghiệp đạt loại giỏi năm 2021. Đây là minh
+                            chứng cho chất lượng giảng dạy và sự chăm sóc
+                            tận tình mà trường dành cho sinh viên của
+                            mình
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-intro reversed reveal">
+                <div class="intro-col5">
+                    <div class="intro-box-full">
+                        <img src="./assets/images/introduce/achivement/achivement_4.jpg">
+                    </div>
+                </div>
+                <div class="intro-col5">
+                    <div class="intro-box-5">
+                        <h2 class="text-custom">Hoạt động vì cộng đồng</h2>
+                        <p>
+                            Trường Đại học Mở Thành phố Hồ Chí Minh tích cực
+                            tham gia các hoạt động cộng đồng và xã hội, với
+                            các chương trình hỗ trợ học sinh nghèo, hoạt
+                            động tình nguyện và các sự kiện vì cộng đồng.
+                            Đây là một phần quan trọng trong cam kết của
+                            trường đối với xã hội.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crossbar">
+                <h1><i class="fa-solid fa-dash"></i></h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <div class="location">
+        <div class="content__title">
+            <h1>Cơ sở học tập</h1>
+            <p>Đại học Mở Thành phố Hồ Chí Minh với nhiều cơ sở học tập khác nhau. Mỗi cơ sở học tập đểu được trang bị
+                cơ sở vật chất hiện đại, phục vụ cho việc giảng dạy và học tập của sinh viên.</p>
+        </div>
+
+        <div class="grid-1100">
+            <div class="location-cards">
+                <div class="row-grid">
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_1.jpg" alt="97 Võ Văn Tần, P.6 Q.3">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 1</h2>
+                                <h3 class="card__des">97 Võ Văn Tần, P.6 Q.3</h3>
+                                <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+1/@10.7763177,106.6902948,18z/data=!4m6!3m5!1s0x31752f3ae35e3725:0x20c5174a47f97be3!8m2!3d10.7763284!4d106.6902291!16s%2Fm%2F02qqlv4?"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_2.jpg"
+                                alt="37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Hồ Chí Minh">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 2</h2>
+                                <h3 class="card__des">37 Hồ Hảo Hớn, Cô Giang, Quận 1</h3>
+                                <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+2/@10.7611471,106.6923099,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f114014707f:0x3f198b980ca59fdf!8m2!3d10.7611471!4d106.6923099!16s%2Fg%2F1td8wm26?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_3.jpg"
+                                alt="Khu dân cư Nhơn Đức, Nhà Bè">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 3</h2>
+                                <h3 class="card__des">Khu Dân cư Nhơn Đức, Huyện Nhà Bè</h3>
+                                <a href="https://www.google.com/maps/place/Khu+d%C3%A2n+c%C6%B0+Nh%C6%A1n+%C4%90%E1%BB%A9c/@10.6785135,106.6893797,17z/data=!3m1!4b1!4m6!3m5!1s0x317530465869b203:0x5b9acb79810d30ee!8m2!3d10.6785135!4d106.6893797!16s%2Fg%2F11gdzrvh8y?entry=tts&shorturl=1"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_4.jpg"
+                                alt="2 Đ. Mai Thị Lựu, Đa Kao, Quận 1">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 4</h2>
+                                <h3 class="card__des">2 Đ. Mai Thị Lựu, Đa Kao, Quận 1</h3>
+                                <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.+H%E1%BB%93+Ch%C3%AD+Minh+-+C%C6%A1+s%E1%BB%9F+4/@10.7899613,106.6999646,16.75z/data=!4m6!3m5!1s0x3175298fbe8d0ad9:0x752364c60b6da2c3!8m2!3d10.7903963!4d106.7005621!16s%2Fg%2F11ghn4263m?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_5.jpg"
+                                alt="68 Lê Thị Trung, Phú Lợi, Thủ Dầu Một, Bình Dương">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 5</h2>
+                                <h3 class="card__des">68 Lê Thị Trung, Phú Lợi, Thủ Dầu Một, Bình Dương</h3>
+                                <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+B%C3%ACnh+D%C6%B0%C6%A1ng/@10.9862616,106.6715896,17z/data=!4m5!3m4!1s0x0000000000000000:0x319be7faa14dc1ed!8m2!3d10.9878148!4d106.6735119?shorturl=1"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-4 col-res-12">
+                        <article class="card__article">
+                            <img src="./assets/images/introduce/location/location_6.jpg"
+                                alt="Long Bình Tân, Thành phố Biên Hòa, Đồng Nai">
+
+                            <div class="card__data">
+                                <h2 class="card__title">Cơ sở 6</h2>
+                                <h3 class="card__des">Long Bình Tân, Thành phố Biên Hòa, Đồng Nai</h3>
+                                <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+H%E1%BB%8Dc+M%E1%BB%9F+Tp.+H%E1%BB%93+Ch%C3%AD+Minh,+c%C6%A1+s%E1%BB%9F+2./@10.9024207,106.8551803,18z/data=!4m6!3m5!1s0x3174df0599397ef3:0x45051888e4f64907!8m2!3d10.9018677!4d106.856602!16s%2Fg%2F11c567_nsd?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Club -->
+    <div class="club">
+        <div class="content__title">
+            <h1>Câu lạc bộ</h1>
+            <p>Trường đại học Mở Thành phố Hồ Chí Minh với nhiều câu lạc bộ, phù hợp với nhiều sở thích của sinh viên. Đây là nơi giúp sinh viên thỏa sức với đam mê và trau đồi kĩ năng sống cho bản thân.</p>
+        </div>
+
+        <div class="grid-1100">
+            <div class="club-cards">
+                <div class="row-grid">
+                    <div class="col-4 col-res-12">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="./assets/images/introduce/club/dance_club.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h2>BEAT - BE A TEAM</h2>
+                                <p>Tạo sân chơi cho các tài năng trẻ thỏa sức bộc lộ chính mình cùng niềm đam mê nghệ thuật và phát triển bản thân. Với sự khởi đầu là các hoạt động nhảy, múa biểu diễn sân khấu và truyền thông.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-4 col-res-12">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="./assets/images/introduce/club/music_club.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h2>NIGHT GUITAR CLUB</h2>
+                                <p>Tại đây, bạn sẽ được hòa mình vào những buổi biểu  vời và thư g và khán giả cùng chung niềm đam mê và cảm xúc. Đây chính là nơi thỏa sức đam mê nghệ thuật cho các bạn.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-4 col-res-12">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="./assets/images/introduce/club/game_club.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h2>OU ESPORT</h2>
+                                <p> Đây là điểm đến lý tưởng cho những người đam mê trò chơi điện tử và thể thao điện tử. Hãy đến với chúng tôi để trải nghiệm những giây phút chiến đấu, sát cánh bên nhau.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Thông tin khác</h4>
+                    <ul>
+                        <li>
+                            <a href="https://tuyensinh.ou.edu.vn/" target="_blank">Website tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/groups/ou.community" target="_blank">Cộng đồng sinh viên
+                                OU</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/groups/oumembers" target="_blank">Sinh viên đại học Mở</a>
+                        </li>
+                        <li>
+                            <a href="https://www.messenger.com/t/301101586751149/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+                                target="_blank">Message tuyển sinh</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li>
+                            <a href="mailto:tuyensinh@ou.edu.vn">Email tuyển
+                                sinh</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/tuyensinh.ou.edu.vn" target="_blank">Fanpage tuyển
+                                sinh</a>
+                        </li>
+                        <li>
+                            <a href="tel:1800585884">Hotline</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+2/@10.7611471,106.6923099,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f114014707f:0x3f198b980ca59fdf!8m2!3d10.7611471!4d106.6923099!16s%2Fg%2F1td8wm26?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">Cơ sở hành chính</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Cơ sở học tập</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+1/@10.7763177,106.6902948,18z/data=!4m6!3m5!1s0x31752f3ae35e3725:0x20c5174a47f97be3!8m2!3d10.7763284!4d106.6902291!16s%2Fm%2F02qqlv4?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">97 Võ Văn Tần, P.6 Q.3</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Khu+d%C3%A2n+c%C6%B0+Nh%C6%A1n+%C4%90%E1%BB%A9c/@10.6785135,106.6893797,17z/data=!3m1!4b1!4m6!3m5!1s0x317530465869b203:0x5b9acb79810d30ee!8m2!3d10.6785135!4d106.6893797!16s%2Fg%2F11gdzrvh8y?entry=tts&shorturl=1"
+                                target="_blank">Nhơn Đức, Huyện Nhà Bè</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.+H%E1%BB%93+Ch%C3%AD+Minh+-+C%C6%A1+s%E1%BB%9F+4/@10.7903108,106.6999974,18z/data=!4m6!3m5!1s0x3175298fbe8d0ad9:0x752364c60b6da2c3!8m2!3d10.7903963!4d106.7005621!16s%2Fg%2F11ghn4263m?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">02 Mai Thị Lựu, P.Đa Kao,
+                                Q.1</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+B%C3%ACnh+D%C6%B0%C6%A1ng/@10.9862616,106.6715896,17z/data=!4m5!3m4!1s0x0000000000000000:0x319be7faa14dc1ed!8m2!3d10.9878148!4d106.6735119?shorturl=1"
+                                target="_blank">68 Lê Thị Trung, Tp.Thủ Dầu
+                                Một</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+H%E1%BB%8Dc+M%E1%BB%9F+Tp.+H%E1%BB%93+Ch%C3%AD+Minh,+c%C6%A1+s%E1%BB%9F+2./@10.9024207,106.8551803,18z/data=!4m6!3m5!1s0x3174df0599397ef3:0x45051888e4f64907!8m2!3d10.9018677!4d106.856602!16s%2Fg%2F11c567_nsd?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">P.Long Bình Tân, Tp. Biên
+                                Hòa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>Copyright &copy 2024 - Bản quyền thuộc Lưu Văn Phúc</p>
+    </div>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="./assets/js/default.js"></script>
+    <script src="assets/js/introduce.js"></script>
+</body>
+
+</html>

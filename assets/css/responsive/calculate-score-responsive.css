@@ -1,0 +1,145 @@
+/* For mobile devices (up to 767px) */
+@media screen and (max-width: 767px) {
+    #hocba-finish > .buttons{
+        display: none;
+    }
+    .hero-before , .hero-subtitle{
+        display: none;
+    }
+    .container-midle-location {
+        margin-inline: 1rem;
+    }
+    .card__data {
+        width: 90%; /* Use a percentage for better responsiveness */
+        padding: 1rem 1.5rem;
+    }
+    .card__description, .card__title {
+        font-size: 0.875rem; /* Small text size for better readability */
+    }
+    .prev, .next {
+        font-size: 1.5rem;
+    }
+    .grade-column {
+        width: 100%;
+    }
+    /* Additional styles for small devices */
+    .buttons {
+        display: flex;
+        justify-content: center; /* Center the button */
+        margin-top: 20px; /* Optional: Add spacing above the button */
+    }
+    button#calculateButton {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+}
+
+/* For tablets (from 768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    form {
+        display: block;
+    }
+    
+    /* Adjust navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    nav .nav__menu {
+        display: flex;
+        gap: 15px;
+    }
+
+    nav .btn-mobile {
+        display: none;
+    }
+
+    /* Adjust hero section */
+    .hero-banner .hero-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-banner .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-banner .hero-subtitle {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .hero-banner img.hero-banner-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    /* Adjust grade columns */
+    .grade-column {
+        width: 30%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        display: flex;
+        display: inline-block;
+    }
+
+    .preferences {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust form elements */
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        padding: 8px;
+        font-size: 1rem;
+        width: 100%;
+    }
+    #hocba-finish > .buttons{
+        width: 30%;
+        margin: auto;
+    }
+    /* Adjust buttons */
+    .buttons {
+        display: flex;
+        justify-content: center; /* Center the button */
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        margin-top: 20px; /* Optional: Add spacing above the button */
+    }
+
+    button#calculateButton {
+        margin: auto;
+        margin-bottom: 10rem; /* Ensure there is no extra margin affecting positioning */
+    }
+
+    /* Adjust other elements as necessary */
+    .section-title {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .section-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title ol {
+        padding-left: 20px;
+    }
+}

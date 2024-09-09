@@ -1,0 +1,87 @@
+/* Tablet */
+@media (min-width: 46.25rem) and (max-width: 64rem) {
+    .banner{
+        overflow-x: hidden;
+    }
+
+    .banner__container{
+        padding: 0 60px;
+    }
+    
+    .shape{
+        margin-top: 0;
+    }
+
+    .core-value__card{
+        height: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.188rem) {
+    .banner{
+        overflow: hidden;
+        height: 1060px;
+    }
+
+    .banner__container{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin-top: 120px;
+    }
+
+    .banner__content{
+        margin-top: 50px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .watch-more{
+        margin-top: 20px;
+    }
+
+    .shape{
+        margin-top: 0;
+    }
+
+    .vission-and-mission{
+        margin-top: 50px;
+    }
+
+    .home-content__title--main{
+        font-size: 2rem;
+    }
+
+    .vission-and-mission__cards{
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .vission-and-mission__card{
+        height: 400px;
+    }
+
+    .vission-and-mission__card:hover .vission-and-mission__card__info{
+        height: 280px;
+    }
+
+    .core-value{
+        margin-top: -80px;
+        margin-bottom: -40px;
+    }
+    
+    .col-custom{
+        width: 100% !important;
+    }
+
+    .core-value__cards{
+        flex-wrap: wrap;
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    .core-value__card{
+        margin: 20px 0;
+        height: 340px;
+    }
+}

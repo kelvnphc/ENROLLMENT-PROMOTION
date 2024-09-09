@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logo/logo_ou.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tuyển sinh Đại học Mở TP.HCM</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="./assets/css/admission.css">
+    <link rel="stylesheet" href="./assets/css/responsive/default-responsive.css">
+    <link rel="stylesheet" href="./assets/css/responsive/admission-responsive.css">
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="loader">
+        <dotlottie-player src="https://lottie.host/4847d9c4-1e33-45d3-8924-fb0c84491160/qZKISvQ0JF.json"
+            background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" loop
+            autoplay></dotlottie-player>
+    </div>
+
+    <!-- ProgressBar -->
+    <div id="cursorMeter">
+        <div id="progressBar"></div>
+    </div>
+
+    <!-- Back top top -->
+    <button id="back-to-top"><i class='bx bxs-left-top-arrow-circle'></i></button>
+
+    <!-- Navbar -->
+    <nav>
+        <a class="nav__logo" href="./index.html">
+            <div class="nav__logo__image">
+                <img src="./assets/images/logo/logo_ou.png" alt="Logo OU">
+            </div>
+
+            <h3 class="nav__logo__title">Tuyển sinh OU</h3>
+        </a>
+
+        <ul class="nav__menu">
+            <li>
+                <div class="btn-mobile close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </li>
+
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./introduce.html">Giới thiệu</a></li>
+            <li><a href="./admission.html" class="choose">Tuyển sinh đại học</a></li>
+            <li><a href="./calculate-score.html">Tính điểm xét tuyển</a></li>
+        </ul>
+
+        <div class="btn-mobile open">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+    <!-- Content -->
+    <div class="container-content">
+        <section>
+            <h1 class="section-title">Giới thiệu tổng quan</h1>
+
+            <div class="section-notification">
+                <h3 class="section-notification--item">📢 Thông báo</h3>
+                <p style="margin-left: 20px;" class="section-notification--item"><strong>📞 Fanpage tư vấn tuyển
+                        sinh:</strong> <a class="section-mobile" href="https://www.facebook.com/tuyensinh.ou.edu.vn"
+                        target="_blank">https://www.facebook.com/tuyensinh.ou.edu.vn</a></p>
+                <p style="margin-left: 20px;" class="section-notification--item"><strong>🌐 Website tuyển sinh:</strong>
+                    <a href="https://tuyensinh.ou.edu.vn/" target="_blank">https://tuyensinh.ou.edu.vn/</a>
+                </p>
+            </div>
+            <hr>
+            <blockquote>
+                <p class="text-content">📔 Website tuyển sinh được tạo ra để tổng hợp các thông tin để thí sinh
+                    dễ dàng tìm kiếm tất cả thông tin chỉ gói gọn trong website, không phải vất vả
+                    đi tìm thông tin trên mạng (vì có thể tìm kiếm sai). Sổ tay tổng hợp các thông tin gồm:</p>
+            </blockquote>
+            <ul class="list">
+                <li>Thông tin về Trường Đại học Mở</li>
+                <li>Tuyển sinh chính quy (xét học bạ & xét thi THPTQG)</li>
+                <li>Tuyển sinh Đánh giá năng lực</li>
+                <li>Học phí - điểm chuẩn các năm</li>
+                <li>Địa điểm học tập</li>
+                <li>Học bổng tuyển sinh</li>
+                <li>Giới thiệu ngành học</li>
+                <li>Hướng dẫn đăng ký xét tuyển</li>
+                <li>Cách tính điểm xét tuyển</li>
+            </ul>
+            <hr>
+        </section>
+
+        <section>
+            <h2 class="section-title">I. Thông tin Trường</h2>
+            <ul class="list">
+                <li><strong>TRƯỜNG ĐẠI HỌC MỞ THÀNH PHỐ HỒ CHÍ MINH (Ho Chi Minh City Open University)</strong></li>
+                </li>
+                <li>⚡ Loại hình: Trường Công lập từ năm 2006</li>
+                </li>
+                <li>🌐 Trụ sở chính (cơ sở hiệu bộ): 35-37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Tp. Hồ Chí Minh</li>
+                </li>
+                <li class="section-item">🌎 Website tuyển sinh: <a href="http://tuyensinh.ou.edu.vn/"
+                        target="_blank">http://tuyensinh.ou.edu.vn/</a></li>
+                </li>
+                <li class="section-item">📧 Email tuyển sinh: <a
+                        href="mailto:tuyensinh@ou.edu.vn">tuyensinh@ou.edu.vn</a></li>
+                </li>
+                <li>📞 Điện thoại: (028) 38364748</li>
+                </li>
+            </ul>
+            <p style="margin: 20px 0; line-height: 24px;" class="text-content">Trường ĐH Mở Tp. HCM đa dạng về loại hình
+                đào tạo (Chính quy, Từ xa, Vừa học vừa làm, Trực tuyến); nhiều
+                bậc đào tạo từ đại học đến Sau đại học (Thạc sĩ, Tiến sĩ); đa dạng về Lĩnh vực đào tạo (29 ngành đại
+                trà, 13 ngành Chất lượng cao); đa dạng chương trình học: Đại trà, Chất lượng cao và nhiều chương trình
+                Liên kết quốc tế với ĐH Flinders, Bond – Úc, Rouen – Pháp – những chương trình đào tạo bằng cấp Quốc tế,
+                siêu tiết kiệm với những chuyên ngành vô cùng thu hút, hấp dẫn, mở ra nhiều cơ hội cho người học.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">II. Thông tin tuyển sinh</h2>
+
+            <div class="post">
+                <div class="post-top">
+                    <i class='bx bx-bulb'></i>
+                    <h2>Hướng dẫn</h2>
+                </div>
+
+                <h2>Lộ trình xét tuyển theo phương thức xét học bạ THPT</h2>
+            </div>
+
+            <div class="step">
+                <div class="step-top">
+                    <h1 class="step-top__title">Bước 1: Tìm hiểu thông tin tuyển sinh xét tuyển</h1>
+                    <p class="step-top__des">
+                        Tìm hiểu thông tin xét tuyển, chỉ tiêu, phương thức xét, học bổng, điểm chuẩn các năm để lên kế
+                        hoạch xét tuyển thật tốt
+                    </p>
+                </div>
+
+                <ul class="list">
+                    <li class="section-item">Tuyển sinh học bạ: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+
+                    <li class="section-item">Học bổng tuyển sinh: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+
+                    <li class="section-item">Chỉ tiêu và học phí: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+
+                    <li class="section-item">Điểm chuẩn các năm: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <div class="step-top">
+                    <h1 class="step-top__title">Bước 2: Hiểu được cách tính điểm, quy chế tuyển sinh</h1>
+                    <p class="step-top__des">
+                        Sau khi tham khảo xong thông tin xét tuyển, ta cần xem trường tính điểm như thế nào, cần tìm
+                        hiểu về
+                        khu vực ưu tiên, đối tượng ưu tiên để tránh nhầm lẫn
+                    </p>
+                </div>
+
+                <ul class="list">
+                    <li class="section-item">Công cụ tính điểm: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+
+                    <li class="section-item">Quy chế tuyển sinh: <a href="#" target="_blank">Nhấn vào đây</a></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hidden-content">
+                <div class="step">
+                    <div class="step-top">
+                        <h1 class="step-top__title">Bước 3: Tham khảo hướng dẫn đăng ký xét tuyển học bạ online</h1>
+                        <p class="step-top__des">
+                            Sau khi tìm hiểu rõ cách tính điểm, quy chế tuyển sinh, đã biết cách chọn tổ hợp nào có điểm
+                            cao nhất, ta cần tìm hiểu các phương thức xét tuyển, mức độ ưu tiên xét tuyển của các phương
+                            thức để lựa chọn được phương thức phù hợp cũng như hiệu quả nhất
+                        </p>
+
+                        <p class="step-top__title-list">Các phương thức được sử dụng chính:</p>
+
+                        <ul class="list">
+                            <li class="section-item">Phương thức sử dụng văn bằng, chứng chỉ quốc tế (A-level, IB, SAT)
+                            </li>
+                            <li class="section-item">Phương thức sử dụng kết quả kỳ thi Đánh giá năng lực của Đại học
+                                Quốc gia TP.HCM</li>
+                            <li class="section-item">Phương thức xét học bạ HSG 3 năm THPT có Chứng chỉ ngoại ngữ</li>
+                            <li class="section-item">Phương thức xét học bạ HSG 3 năm THPT</li>
+                            <li class="section-item">Phương thức xét học bạ có Chứng chỉ ngoại ngữ</li>
+                            <li class="section-item">Phương thức xét học bạ THPT</li>
+                            <li class="section-item">Xét tuyển Kỳ thi đánh giá đầu vào đại học (V-SAT)*</li>
+                        </ul>
+
+                        <p class="step-top__des">
+                            <strong>V-SAT: </strong>do Trường Đại học Mở TP. Hồ Chí Minh, Trường Đại học Ngân hàng TP.
+                            Hồ Chí Minh, Trường Đại học Tài chính - Marketing, Trường Đại học Luật TP. Hồ Chí Minh,
+                            Trường Đại học Văn Lang, Trường Đại học Trà Vinh, Trường Đại học Sài Gòn, Trường Đại học Cần
+                            Thơ, Đại học Thái Nguyên và Học viện Ngân hàng tổ chức thi.
+                        </p>
+
+                        <div class="post">
+                            <div class="post-top">
+                                <i class='bx bxs-error'></i>
+                                <h2>Lưu ý</h2>
+                            </div>
+
+                            <ul class="list">
+                                <li class="section-item">Thí sinh tránh nhầm lẫn Phương thức xét học bạ HSG là HSG cấp
+                                    tỉnh, thành phố, quốc gia. Thực chất, phương thức này là xét 3 năm HSG THPT (HSG cột
+                                    cả năm 10, 11 và học kỳ 1 năm 12)</li>
+                                <li class="section-item">Thứ tự ưu tiên các phương thức (độ ưu tiên xét tuyển giảm dần):
+                                    <ul>
+                                        <li>
+                                            (1) Phương thức sử dụng văn bằng, chứng chỉ quốc tế (A-level, IB, SAT)
+                                        </li>
+                                        <li>
+                                            (2) Phương thức sử dụng kết quả kỳ thi Đánh giá năng lực của Đại học Quốc
+                                            gia TP.HCM
+                                        </li>
+                                        <li>
+                                            (3) Phương thức xét học bạ HSG(*) 3 năm THPT có Chứng chỉ ngoại ngữ
+                                        </li>
+                                        <li>
+                                            (4) Phương thức xét học bạ HSG(*) 3 năm THPT
+                                        </li>
+                                        <li>
+                                            (5) Phương thức xét học bạ có Chứng chỉ ngoại ngữ
+                                        </li>
+                                        <li>
+                                            (6) Phương thức xét học bạ THPT
+                                        </li>
+                                        <li>
+                                            (7) Xét tuyển Kỳ thi đánh giá đầu vào đại học (V-SAT)
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-top">
+                        <h1 class="step-top__title">Bước 4: Chờ kết quả, tra cứu kết quả</h1>
+                        <p class="step-top__des">
+                            Sau khi đăng ký hoàn tất, thí sinh chờ kết quả trúng tuyển và sau khi có thông báo tra cứu.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-top">
+                        <h1 class="step-top__title">Bước 5: Điền nguyện vọng trên website Bộ GD&ĐT</h1>
+                        <p class="step-top__des">
+                            Sau khi tra cứu và có kết quả trúng tuyển vào trường, thí sinh chờ ngày và đăng ký nguyện
+                            vọng trên website của Bộ GD&ĐT
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step"></div>
+                    <div class="step-top">
+                        <h1 class="step-top__title">Bước 6: Chuẩn bị hồ sơ nhập học</h1>
+                        <p class="step-top__des">
+                            Tham khảo cách đăng ký nhập học online, chuẩn bị nộp hồ sơ về trường khi có thông báo
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="btn-controller">
+                <button class="readmore">Xem thêm</button>
+                <button class="compact">Thu gọn</button>
+           </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Thông tin khác</h4>
+                    <ul>
+                        <li>
+                            <a href="https://tuyensinh.ou.edu.vn/" target="_blank">Website tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/groups/ou.community" target="_blank">Cộng đồng sinh viên
+                                OU</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/groups/oumembers" target="_blank">Sinh viên đại học Mở</a>
+                        </li>
+                        <li>
+                            <a href="https://www.messenger.com/t/301101586751149/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+                                target="_blank">Message tuyển sinh</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li>
+                            <a href="mailto:tuyensinh@ou.edu.vn">Email tuyển
+                                sinh</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/tuyensinh.ou.edu.vn" target="_blank">Fanpage tuyển
+                                sinh</a>
+                        </li>
+                        <li>
+                            <a href="tel:1800585884">Hotline</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+2/@10.7611471,106.6923099,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f114014707f:0x3f198b980ca59fdf!8m2!3d10.7611471!4d106.6923099!16s%2Fg%2F1td8wm26?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">Cơ sở hành chính</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Cơ sở học tập</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+1/@10.7763177,106.6902948,18z/data=!4m6!3m5!1s0x31752f3ae35e3725:0x20c5174a47f97be3!8m2!3d10.7763284!4d106.6902291!16s%2Fm%2F02qqlv4?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">97 Võ Văn Tần, P.6 Q.3</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Khu+d%C3%A2n+c%C6%B0+Nh%C6%A1n+%C4%90%E1%BB%A9c/@10.6785135,106.6893797,17z/data=!3m1!4b1!4m6!3m5!1s0x317530465869b203:0x5b9acb79810d30ee!8m2!3d10.6785135!4d106.6893797!16s%2Fg%2F11gdzrvh8y?entry=tts&shorturl=1"
+                                target="_blank">Nhơn Đức, Huyện Nhà Bè</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.+H%E1%BB%93+Ch%C3%AD+Minh+-+C%C6%A1+s%E1%BB%9F+4/@10.7903108,106.6999974,18z/data=!4m6!3m5!1s0x3175298fbe8d0ad9:0x752364c60b6da2c3!8m2!3d10.7903963!4d106.7005621!16s%2Fg%2F11ghn4263m?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">02 Mai Thị Lựu, P.Đa Kao,
+                                Q.1</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+M%E1%BB%9F+TP.HCM+-+C%C6%A1+s%E1%BB%9F+B%C3%ACnh+D%C6%B0%C6%A1ng/@10.9862616,106.6715896,17z/data=!4m5!3m4!1s0x0000000000000000:0x319be7faa14dc1ed!8m2!3d10.9878148!4d106.6735119?shorturl=1"
+                                target="_blank">68 Lê Thị Trung, Tp.Thủ Dầu
+                                Một</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+H%E1%BB%8Dc+M%E1%BB%9F+Tp.+H%E1%BB%93+Ch%C3%AD+Minh,+c%C6%A1+s%E1%BB%9F+2./@10.9024207,106.8551803,18z/data=!4m6!3m5!1s0x3174df0599397ef3:0x45051888e4f64907!8m2!3d10.9018677!4d106.856602!16s%2Fg%2F11c567_nsd?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">P.Long Bình Tân, Tp. Biên
+                                Hòa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>Copyright &copy 2024 - Bản quyền thuộc Lưu Văn Phúc</p>
+    </div>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="./assets/js/default.js"></script>
+    <script src="./assets/js/admission.js"></script>
+</body>
+
+</html>

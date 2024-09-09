@@ -1,0 +1,84 @@
+/* All screen */
+@media screen and (max-width: 93.75rem) {
+    .col-res-12 {
+        width: 100%;
+    }
+
+    .col-res-6 {
+        width: 50%;
+    }
+}
+
+/* Responsive for header */
+@media (max-width: 66.25rem) {
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav.sticky {
+        padding: 20px 50px;
+    }
+
+    .btn-mobile {
+        display: block;
+        margin-right: 26px;
+    }
+
+    .nav__menu {
+        position: fixed;
+        background-color: var(--background-white);
+        flex-direction: column;
+        min-width: 500px;
+        height: 100vh;
+        top: 0;
+        right: -1000%;
+        padding: 80px 10px;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        transition-property: right;
+    }
+
+    .nav__menu.active {
+        right: 0;
+    }
+
+    .btn-mobile.close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        font-size: 2rem;
+    }
+
+    .nav__menu li a {
+        display: block;
+        font-size: 1.25rem;
+        margin: 30px 20px;
+        padding: 0 15px;
+    }
+
+    .nav__menu li a.choose:after {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.188rem) {
+    nav{
+        padding: 20px 20px !important;
+    }
+
+    .btn-mobile{
+        margin-left: 20px !important;
+    }
+
+    .nav__menu.active{
+        min-width: 388px;
+    }
+
+    /* Footer */
+    .footer-col{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
