@@ -62,18 +62,18 @@ btnClose.addEventListener("click", () => {
 })
 
 // Scroll element
+//
 function WidthChange(mq) {
     if (mq.matches) {
     } else {
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var revealTop = reveals[i].getBoundingClientRect().top;
-                var revealPoint = 150;
-
+                var windowHeight = window.innerHeight; // chiều cao cửa sổ trình duyệt
+                var revealTop = reveals[i].getBoundingClientRect().top;// Lấy vị trí của phần tử reveal so với browser
+                var revealPoint = 150; //điểm giới hạn bắt đầu hiển thị phần tử
                 if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add("active");
+                    reveals[i].classList.add("active");//nằm trong vùng nhìn thấy của cửa sổ trình duyệt, thì active nó lên
                 }
             }
         }

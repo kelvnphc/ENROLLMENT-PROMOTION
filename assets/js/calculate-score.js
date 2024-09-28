@@ -35,12 +35,12 @@ document.getElementById('scoreForm').addEventListener('submit', function(event) 
 
     // Generate HTML for results
     let resultsHTML = '';
-    const subjectKeys = Object.keys(subjects);
-    for (let i = 0; i < subjectKeys.length; i += 4) {
-        resultsHTML += '<div class="results-row">';
+    const subjectKeys = Object.keys(subjects); // idSubject(math, phy...)
+    for (let i = 0; i < subjectKeys.length; i += 4)  {
+        resultsHTML += '<div class="results-row">'; // vòng lặp duyệt qua các môn, mỗi lần xử lý 4 môn nhóm thành một hàng, tạo một hàng mới
         for (let j = 0; j < 4 && i + j < subjectKeys.length; j++) {
             const subject = subjectKeys[i + j];
-            const averageScore = averageScores[subject];
+            const averageScore = averageScores[subject]; //duyệt qua 4 môn trong một hàng, lấy đtb và thêm vào result
             resultsHTML += `
                 <div class="input-group">
                     <label>${subjects[subject]}</label>
@@ -52,11 +52,11 @@ document.getElementById('scoreForm').addEventListener('submit', function(event) 
     }
 
     // Display results
-    document.getElementById('resultsTable').innerHTML = resultsHTML;
+    document.getElementById('resultsTable').innerHTML = resultsHTML; // insert HTML kết quả vào phần tử có id là resultTable
     document.getElementById('results').style.display = 'block';
 
-    // Calculate priority points
-    const kvutScore = parseFloat(document.querySelector('#optionsKVUT option:checked').getAttribute('data-score')) || 0;
+    // Calculate priority points, lấy giá trị của các tùy chọn đã chọn trong các danh sách id
+    const kvutScore = parseFloat(document.querySelector('#optionsKVUT option:checked').getAttribute('data-score')) || 0; // lấy giá trị từ các data-score trong html, chuyển giá trị đó thành số thực, không có thì là 0
     const dtutScore = parseFloat(document.querySelector('#optionsDTUT option:checked').getAttribute('data-score')) || 0;
     const icsScore = parseFloat(document.querySelector('#optionsICS option:checked').getAttribute('data-score')) || 0;
 
@@ -89,6 +89,7 @@ document.getElementById('scoreForm').addEventListener('submit', function(event) 
 
     // Calculate block scores and generate HTML
     let blockResultsHTML = '';
+    //vòng lặp qua từng khối thi trên từng cái mảng trên
     for (const [block, subjects] of Object.entries(blocks)) {
         let totalScore = 0;
         let numSubjects = 0;
@@ -191,13 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return tableHTML;
     }
 
-    // Display table with pagination
+    // Display table with pagination(PHÂN TRANG)
     function displayTable(page, dataToDisplay) {
         const start = (page - 1) * rowsPerPage;
         const end = start + rowsPerPage;
         const paginatedData = dataToDisplay.slice(start, end);
-        document.getElementById('resultsContainer').innerHTML = createTable(paginatedData);
-        document.getElementById('prevPage').classList.toggle('disabled', page === 1);
+        document.getElementById('resultsContainer').innerHTML = createTable(paginatedData);//tạo HTML cho bảng từ paginatedData, chèn vô resultsContainer
+        document.getElementById('prevPage').classList.toggle('disabled', page === 1);//đang ở trang đầu thì disable
         document.getElementById('nextPage').classList.toggle('disabled', end >= dataToDisplay.length);
     }
 
@@ -205,16 +206,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterTable() {
         const query = document.getElementById('searchInput').value.toLowerCase();
         const filteredData = data.filter(row =>
-            row.some(cell => cell.toString().toLowerCase().includes(query))
+            row.some(cell => cell.toString().toLowerCase().includes(query))//Hàm some trả về true nếu ít nhất một ô trong dòng chứa chuỗi tìm kiếm.
+
         );
         currentPage = 1; // Reset to first page when filtering
         displayTable(currentPage, filteredData);
     }
 
-    // Pagination Navigation
+    // Pagination Navigation 
     document.getElementById('prevPage').addEventListener('click', function() {
         if (currentPage > 1) {
-            currentPage--;
+            currentPage--;// kiểm tra xem phải trang đầu không, không phải thì giảm số trang rồi hiển thị dữ liệu
             displayTable(currentPage, data.filter(row =>
                 row.some(cell => cell.toString().toLowerCase().includes(document.getElementById('searchInput').value.toLowerCase()))
             ));
@@ -226,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
             row.some(cell => cell.toString().toLowerCase().includes(document.getElementById('searchInput').value.toLowerCase()))
         );
         if ((currentPage * rowsPerPage) < filteredData.length) {
-            currentPage++;
+            currentPage++; // kiểm tra xem còn dữ liệu đã lọc không, nếu có hiện ở trang kế tiếp
             displayTable(currentPage, filteredData);
         }
     });
@@ -244,7 +246,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-// Function to create a toast notification
+// Function to create a toast notification(hàm hiển thị báo lỗi sau khi validation bên dưới)
 function showToast(message, type = 'info') {
     const toastContainer = document.getElementById('toastContainer');
     
@@ -265,7 +267,7 @@ function showToast(message, type = 'info') {
     `;
     
     // Append toast to container
-    toastContainer.appendChild(toast);
+    toastContainer.appendChild(toast);//di chuyển phần tử first ra cuối ds
     
     // Close the toast when the close button is clicked
     toast.querySelector('.toast-close').addEventListener('click', function() {
